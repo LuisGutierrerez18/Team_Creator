@@ -1,30 +1,30 @@
 /*
  * Fantasy Team Creator Proyect defender.h class
- * Luis Enrique Gutierrez 
- * 
+ * Luis Enrique Gutierrez
+ *
  * For: Object Oriented Programming 2
  * Class will define an specific object type. In this file: defender
  * Goalkeeper attributes will be declared as height and number of saves made
- *  
+ *
 */
 
-#include<iostream> // prints 
+#include<iostream> // prints
 #include <string>
 #include "player.h"
 using namespace std;
 
-class defender: public player
+class Defender: public Player
 {
-    // Private variables 
+    // Private variables
     private:
         int interceptions;
         int own_goals;
         int cleansheet;
 
     public:
-        
+
         /* Constructor */
-        defender(string n, int rat, int bir, int inter, int og, int clean) {   
+        Defender(string n, int rat, int bir, int inter, int og, int clean) {
             name = n;
             rating = rat;
             birthday = bir;
@@ -34,17 +34,17 @@ class defender: public player
         }
 
         /* Getter and Setter Methods for the defender class */
-        
+
         /*
          * Getter Method: 'get_interceptions' will return the numnber of interceptions of the defender
-        */ 
+        */
         int get_interceptions()
         {
             return interceptions;
         }
 
         /*
-         * Setter Method: 'set_interceptions' will update the value of interceptions 
+         * Setter Method: 'set_interceptions' will update the value of interceptions
         */
         void set_interceptions(int newInter)
         {
@@ -53,14 +53,14 @@ class defender: public player
 
         /*
          * Getter Method: 'get_own_goals' will return the the number of own goals conceded
-        */ 
+        */
         int get_own_goals()
         {
             return own_goals;
         }
 
         /*
-         * Setter Method: 'set_own_goal' will update the value of own goals  
+         * Setter Method: 'set_own_goal' will update the value of own goals
         */
         void set_own_goal(int newOwnGoals)
         {
@@ -69,14 +69,14 @@ class defender: public player
 
         /*
          * Getter Method: 'get_cleansheet' will return the the number of cleansheets reached
-        */ 
+        */
         int get_cleansheet()
         {
             return cleansheet;
         }
 
         /*
-         * Setter Method: 'set_cleansheet' will update the value of cleansheets 
+         * Setter Method: 'set_cleansheet' will update the value of cleansheets
         */
         void set_cleansheet(int newCleansheet)
         {
@@ -92,7 +92,7 @@ class defender: public player
         }
 
         /*
-         * Class being used by the polymorphism concept. Making the program more interactive 
+         * Class being used by the polymorphism concept. Making the program more interactive
          * Tell the user the action the player is doing
          * Since is Defender player is keeping cleansheets
         */
@@ -100,4 +100,4 @@ class defender: public player
         {
             cout << "Defender is keeping many cleansheets for his team";
         }
-}; 
+};

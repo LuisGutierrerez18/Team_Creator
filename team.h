@@ -1,46 +1,48 @@
 /*
  * Fantasy Team Creator Proyect forward.h class
- * Luis Enrique Gutierrez 
- * 
+ * Luis Enrique Gutierrez
+ *
  * For: Object Oriented Programming 2
  * Class will define an specific object type. In this file: the complete team
  * Will include an array in which every player would be added to.
  * Also the budget would be managed in this section.
 */
 
-#include<iostream> // prints 
+#include<iostream> // prints
 #include <string>
 #include "player.h"
 using namespace std;
 
-class team
+class Team
 {
     private:
         double budget = 100.0; // Team Budget assigned to 100 by default
-        int counter =0;
+        int counter = 0;
         static const int teamSize = 16;
+        string nameOfTeam;
 
-        // Siguiendo ejemplo del profe 
-        Team *teamList[teamSize]; // Pointers --> array 
+        // Siguiendo ejemplo del profe
+        Player *teamList[teamSize]; // Pointers --> array
     protected:
         string type; // type of player
 
     public:
         //string team[16]; // list of all the players selected in the team
-        double price; 
+        double price;
 
         /* Team Constructor */
-        team(string t)
+        Team(string t)
         {
-            
+            counter = 0;
+            nameOfTeam = t;
         }
 
         /* Methods */
-        
+
         /*
          * Will receive the price of each player and subtract it from the club's budget
         */
-        void adjust_budget(double max_price = 10.0) // This max_price is the maximum price of any individual player 
+        void adjust_budget(double max_price = 10.0) // This max_price is the maximum price of any individual player
         {
             /* Test */
             cout << "Enter the price of the player: ";
@@ -51,7 +53,7 @@ class team
                 budget = budget - price;
                 cout<< "Budget Left:" << budget;
             }
-                
+
         }
 
         /*
@@ -68,12 +70,21 @@ class team
                 cout<< "Enter the number of the player: ";
                 cin>> name;
 
-                
-                
+
+
                 i++;
             }
 
-            cout<<teamC;
+            cout<<name;
+        }
+
+        /*
+         * Method will add all the players to the principal team list
+        */
+        void add_player(Player *player)
+        {
+            teamList[counter] = player;
+            counter++;
         }
 
 };

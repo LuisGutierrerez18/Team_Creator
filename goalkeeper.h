@@ -1,22 +1,22 @@
 /*
  * Fantasy Team Creator Proyect goalkeeper.h class
- * Luis Enrique Gutierrez 
- * 
+ * Luis Enrique Gutierrez
+ *
  * For: Object Oriented Programming 2
  * Class will define an specific object type. In this file: goalkeeper
  * Goalkeeper attributes will be declared as height and number of saves made
- *  
+ *
 */
 
-#include<iostream> // prints 
+#include<iostream> // prints
 #include <string>
 #include "player.h"
 using namespace std;
 
 
-class goalkeeper: public player
+class Goalkeeper: public Player
 {
-    // Private variables 
+    // Private variables
     private:
         int height;
         int saves;
@@ -24,8 +24,8 @@ class goalkeeper: public player
     public:
 
         /* Constructor */
-        goalkeeper(string n, int rat, int bir, int h, int sa)
-        {   
+        Goalkeeper(string n, int rat, int bir, int h, int sa)
+        {
             name = n;
             rating = rat;
             birthday = bir;
@@ -35,17 +35,17 @@ class goalkeeper: public player
         /* Constructor Ends */
 
         /* Getter and Setter Methods for the goalkeeper class */
-        
+
         /*
          * Getter Method: 'get_Height' will return the height of the goalkeeper
-        */ 
+        */
         int get_height()
         {
             return height;
         }
 
         /*
-         * Setter Method: 'set_height' will update the value of height 
+         * Setter Method: 'set_height' will update the value of height
         */
         void set_height(int newHeight)
         {
@@ -54,14 +54,14 @@ class goalkeeper: public player
 
         /*
          * Getter Method: 'get_Height' will return the height of the goalkeeper
-        */ 
+        */
         int get_saves()
         {
             return saves;
         }
 
         /*
-         * Setter Method: 'set_saves' will update the value of saves 
+         * Setter Method: 'set_saves' will update the value of saves
         */
         void set_saves(int newSave)
         {
@@ -76,15 +76,15 @@ class goalkeeper: public player
             return saves++;
         }
 
-        // Method overloading of the method 'add_num_saves' 
+        // Method overloading of the method 'add_num_saves'
         int add_num_saves(double numSaves)
         {
-            saves += static_cast<int>(numSaves); // Cast which changes the value of a double to int 
+            saves += static_cast<int>(numSaves); // Cast which changes the value of a double to int
             return saves;
         }
 
         /*
-         * Class being used by the polymorphism concept. Making the program more interactive 
+         * Class being used by the polymorphism concept. Making the program more interactive
          * Tell the user the action the player is doing
          * Since is goalkeeper player is preventing goals
         */

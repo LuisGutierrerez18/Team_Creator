@@ -1,35 +1,35 @@
 /*
  * Fantasy Team Creator Proyect manager.h class
- * Luis Enrique Gutierrez 
- * 
+ * Luis Enrique Gutierrez
+ *
  * For: Object Oriented Programming 2
- * Class will define an specific object type. In this file: manager of the club 
- * Midfielder attributes will be declared as assists and passing percentage 
- *  
+ * Class will define an specific object type. In this file: manager of the club
+ * Midfielder attributes will be declared as assists and passing percentage
+ *
 */
 
-#include<iostream> // prints 
+#include<iostream> // prints
 #include <string>
 using namespace std;
 
-class manager
+class Manager
 {
     private:
         string current_club; // private variable which sotres the current club of the manager
         string last_name; // Manager's Last name
 
     public:
-       
+
         /* Constructor */
-        manager(string club ,string lastN)
-        {   
+        Manager(string club ,string lastN)
+        {
             current_club = club;
             last_name = lastN;
         }
-        /* Getter and Setter Methods for the manager object */ 
-       
+        /* Getter and Setter Methods for the manager object */
+
        /*
-        * Method: 'get_current_club' will get and return the current club the manager is coaching 
+        * Method: 'get_current_club' will get and return the current club the manager is coaching
        */
         string get_current_club()
         {
@@ -46,17 +46,17 @@ class manager
 
         /*
          * public 'search_manager' method will require an input from the user looking for a manager.
-         * method will traverse through an array wilth coaches last names looking for 
+         * method will traverse through an array wilth coaches last names looking for
         */
         void search_manager()
         {
             string manager_list[] = {"Guardiola", "Xavi", "Klopp", "Ancelloti", "Zidane", "Inzaghi", "Arteta"}; // Manager's list
-            
-            int manager_list_length = sizeof(manager_list)/sizeof(manager_list[0]); //Will return the length of manager list Array 
-            
+
+            int manager_list_length = sizeof(manager_list)/sizeof(manager_list[0]); //Will return the length of manager list Array
+
             bool mangaer_found = false;
 
-            // While loop: while manger is not found 
+            // While loop: while manger is not found
             while(mangaer_found)
             {
                 cout<< "Enter the last name of the Manager: \n";
@@ -66,13 +66,13 @@ class manager
                 {
                     if(last_name == manager_list[i]) // if found stops loops
                     {
-                        cout<< last_name << " Was Found and Available \n"; 
+                        cout<< last_name << " Was Found and Available \n";
                         mangaer_found = true;
                         break;
                     }
                     else
                     {
-                        // If not found continue trying 
+                        // If not found continue trying
                         cout<<"Keep Trying...";
                     }
                 }

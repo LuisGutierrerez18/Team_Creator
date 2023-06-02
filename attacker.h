@@ -1,32 +1,32 @@
 /*
  * Fantasy Team Creator Proyect forward.h class
- * Luis Enrique Gutierrez 
- * 
+ * Luis Enrique Gutierrez
+ *
  * For: Object Oriented Programming 2
  * Class will define an specific object type. In this file: forward
  * Forward player attributes will be declared as height and number of saves made
- *  
+ *
 */
 
 /* File Name changed from forward.h to attacker.h */
 
-#include<iostream> // prints 
+#include<iostream> // prints
 #include <string>
 #include "player.h"
 using namespace std;
 
-class attacker: public player
+class Attacker: public Player
 {
-    // Private variables 
+    // Private variables
     private:
         int velocity;
         int goals;
         int shots_on_target;
 
-    public: 
+    public:
 
         /* Constructor */
-        attacker(string n, int rat, int bir, int vel, int goal, int shot){   
+        Attacker(string n, int rat, int bir, int vel, int goal, int shot){
             name = n;
             rating = rat;
             birthday = bir;
@@ -35,16 +35,16 @@ class attacker: public player
             shots_on_target = shot;
         }
         /* Getter and Setter Methods for the forward class */
-        
+
         /*
          * Getter Method: 'get_velocity' will return the maximum velociity reached by the forward
-        */ 
+        */
         int get_velocity(){
             return velocity;
         }
 
         /*
-         * Setter Method: 'set_velocity' will update the value of velocity 
+         * Setter Method: 'set_velocity' will update the value of velocity
         */
         void set_velocity(int newVel){
             velocity = newVel;
@@ -52,7 +52,7 @@ class attacker: public player
 
         /*
          * Getter Method: 'get_goals' will return the the number of goals scored
-        */ 
+        */
         int get_goals(){
             return goals;
         }
@@ -66,13 +66,13 @@ class attacker: public player
 
         /*
          * Getter Method: 'get_shots_on_target' will return the the number of shots on target
-        */ 
+        */
         int get_shots_on_target() {
             return shots_on_target;
         }
 
         /*
-         * Setter Method: 'set_shots_on_target' will update the value of shots on target 
+         * Setter Method: 'set_shots_on_target' will update the value of shots on target
         */
         void set_shots_on_target(int newShot_tar){
             shots_on_target = newShot_tar;
@@ -86,7 +86,7 @@ class attacker: public player
         }
 
         /*
-         * Class being used using the polymorphism concept. Making the program more interactive 
+         * Class being used using the polymorphism concept. Making the program more interactive
          * Tell the user the action the player is doing
          * Since is forward player is scoring goals
         */
