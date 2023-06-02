@@ -20,6 +20,12 @@ class manager
 
     public:
        
+        /* Constructor */
+        manager(string club ,string lastN)
+        {   
+            current_club = club;
+            last_name = lastN;
+        }
         /* Getter and Setter Methods for the manager object */ 
        
        /*
