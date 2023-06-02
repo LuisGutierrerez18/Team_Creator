@@ -10,9 +10,10 @@
 
 #include<iostream> // prints 
 #include <string>
+#include "player.h"
 using namespace std;
 
-class midfielder
+class midfielder: public player
 {
     // Private variables 
     private:
@@ -20,6 +21,17 @@ class midfielder
         double passing_percentage;
 
     public:
+        
+        /* Constructor */
+        midfielder(string n, int rat, int bir, int as, int pas)
+        {   
+            name = n;
+            rating = rat;
+            birthday = bir;
+            assist = as;
+            passing_percentage = pas;
+        }
+        
         /* Getter and Setter Methods for the midfielder class */
         
         /*
@@ -57,9 +69,18 @@ class midfielder
         /*
          * Method will serve as a counter to continously updating the number of assists given by the player
         */
-        int add_num_saves()
+        int add_num_assists()
         {
             return assist++;
         }
 
+        /*
+         * Class being used using the polymorphism concept. Making the program more interactive 
+         * Tell the user the action the player is doing
+         * Since is midfielder player is giving assists
+        */
+        void playing()
+        {
+            cout << "Midfielder is giving assist to the forwards";
+        }
 };
