@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "gruntfuggly.todo-tree",
+    "jgclark.vscode-todo-highlight",
+    "kruemelkatze.vscode-dashboard",
+    "naumovs.color-highlight",
+    "formulahendry.code-runner",
+    "aaron-bond.better-comments"
+  ]
+}
