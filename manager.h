@@ -21,8 +21,7 @@ class Manager
     public:
 
         /* Constructor */
-        Manager(string club ,string lastN)
-        {
+        Manager(string club ,string lastN){
             current_club = club;
             last_name = lastN;
         }
@@ -31,16 +30,14 @@ class Manager
        /*
         * Method: 'get_current_club' will get and return the current club the manager is coaching
        */
-        string get_current_club()
-        {
+        string get_current_club(){
             return current_club;
         }
 
         /*
          * Method: 'set_current_club will update the value of current_club for the manager
         */
-        void set_current_club(string newClub)
-        {
+        void set_current_club(string newClub){
             current_club = newClub;
         }
 
@@ -48,8 +45,7 @@ class Manager
          * public 'search_manager' method will require an input from the user looking for a manager.
          * method will traverse through an array wilth coaches last names looking for
         */
-        void search_manager()
-        {
+        void search_manager(){
             string manager_list[] = {"Guardiola", "Xavi", "Klopp", "Ancelloti", "Zidane", "Inzaghi", "Arteta"}; // Manager's list
 
             int manager_list_length = sizeof(manager_list)/sizeof(manager_list[0]); //Will return the length of manager list Array

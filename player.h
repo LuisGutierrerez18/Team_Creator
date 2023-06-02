@@ -226,6 +226,8 @@ class Player {
             cout << "The Player is playing";
         }
 
+        // TODO: Declare a toString method
+
 };
 
 /* Note: the arrays declared above are for testing purposes */

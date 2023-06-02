@@ -31,8 +31,7 @@ class Team
         double price;
 
         /* Team Constructor */
-        Team(string t)
-        {
+        Team(string t){
             counter = 0;
             nameOfTeam = t;
         }
@@ -42,8 +41,7 @@ class Team
         /*
          * Will receive the price of each player and subtract it from the club's budget
         */
-        void adjust_budget(double max_price = 10.0) // This max_price is the maximum price of any individual player
-        {
+        void adjust_budget(double max_price = 10.0) // This max_price is the maximum price of any individual player{
             /* Test */
             cout << "Enter the price of the player: ";
             cin >> price;
@@ -59,8 +57,7 @@ class Team
         /*
          * Method will add all the players to the principal team list
         */
-        void push_player()
-        {
+        void push_player(){
             int i = 0;
             string name;
 
@@ -81,10 +78,10 @@ class Team
         /*
          * Method will add all the players to the principal team list
         */
-        void add_player(Player *player)
-        {
+        void add_player(Player *player){
             teamList[counter] = player;
             counter++;
         }
 
+        // TODO: Print the list of players (declare toString and print inside main)
 };

@@ -33,10 +33,12 @@ int main()
     Player *fwrd = new Attacker("Messi", 94, 1988, 95, 50, 120);
     // Manager *mngr = new Manager("Manchester City", "Guardiola");
 
+    // TODO: Change name of team.
     Team myTeam("Lobitos"); // Creates the team object in which evrything would be stored
 
     // ! Adding names to the list
 
+    // TODO: Add Manager
     myTeam.add_player(gk);
     myTeam.add_player(def);
     myTeam.add_player(mid);

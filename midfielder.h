@@ -23,8 +23,7 @@ class Midfielder: public Player
     public:
 
         /* Constructor */
-        Midfielder(string n, int rat, int bir, int as, int pas)
-        {
+        Midfielder(string n, int rat, int bir, int as, int pas) {
             name = n;
             rating = rat;
             birthday = bir;
@@ -37,40 +36,35 @@ class Midfielder: public Player
         /*
          * Getter Method: 'get_assist' will return the assists made by the midfielder
         */
-        int get_assist()
-        {
+        int get_assist(){
             return assist;
         }
 
         /*
          * Setter Method: 'set_assist' will update the value of assists
         */
-        void set_assist(int newAssist)
-        {
+        void set_assist(int newAssist){
             assist = newAssist;
         }
 
         /*
          * Getter Method: 'get_passing_percentages' will return the passing percentage of the midfielder
         */
-        int get_passing_percentages()
-        {
+        int get_passing_percentages(){
             return passing_percentage;
         }
 
         /*
          * Setter Method: 'set_passing_percentage' will update the value of passing percentage
         */
-        void set_passing_percentage(int newPass)
-        {
+        void set_passing_percentage(int newPass){
             passing_percentage = newPass;
         }
 
         /*
          * Method will serve as a counter to continously updating the number of assists given by the player
         */
-        int add_num_assists()
-        {
+        int add_num_assists(){
             return assist++;
         }
 
@@ -79,8 +73,7 @@ class Midfielder: public Player
          * Tell the user the action the player is doing
          * Since is midfielder player is giving assists
         */
-        void playing()
-        {
+        void playing(){
             cout << "Midfielder is giving assist to the forwards";
         }
 };
