@@ -10,9 +10,10 @@
 
 #include<iostream> // prints 
 #include <string>
+#include "player.h"
 using namespace std;
 
-class defender
+class defender: public player
 {
     // Private variables 
     private:
@@ -21,6 +22,17 @@ class defender
         int cleansheet;
 
     public:
+        
+        /* Constructor */
+        defender(string n, int rat, int bir, int inter, int og, int clean) {   
+            name = n;
+            rating = rat;
+            birthday = bir;
+            interceptions = inter;
+            own_goals = og;
+            cleansheet = clean;
+        }
+
         /* Getter and Setter Methods for the defender class */
         
         /*
@@ -79,4 +91,13 @@ class defender
             return cleansheet++;
         }
 
-};
+        /*
+         * Class being used by the polymorphism concept. Making the program more interactive 
+         * Tell the user the action the player is doing
+         * Since is Defender player is keeping cleansheets
+        */
+        void playing()
+        {
+            cout << "Defender is keeping many cleansheets for his team";
+        }
+}; 
