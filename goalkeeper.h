@@ -10,10 +10,11 @@
 
 #include<iostream> // prints 
 #include <string>
+#include "player.h"
 using namespace std;
 
 
-class goalkeeper
+class goalkeeper: public player
 {
     // Private variables 
     private:
@@ -21,6 +22,18 @@ class goalkeeper
         int saves;
 
     public:
+
+        /* Constructor */
+        goalkeeper(string n, int rat, int bir, int h, int sa)
+        {   
+            name = n;
+            rating = rat;
+            birthday = bir;
+            height = h;
+            saves = sa;
+        }
+        /* Constructor Ends */
+
         /* Getter and Setter Methods for the goalkeeper class */
         
         /*
@@ -61,6 +74,23 @@ class goalkeeper
         int add_num_saves()
         {
             return saves++;
+        }
+
+        // Method overloading of the method 'add_num_saves' 
+        int add_num_saves(double numSaves)
+        {
+            saves += static_cast<int>(numSaves); // Cast which changes the value of a double to int 
+            return saves;
+        }
+
+        /*
+         * Class being used by the polymorphism concept. Making the program more interactive 
+         * Tell the user the action the player is doing
+         * Since is goalkeeper player is preventing goals
+        */
+        void playing()
+        {
+            cout << "Goalkeeper is preventing goals for his team";
         }
 
 };
