@@ -37,6 +37,9 @@ int main()
     Team myTeam("Lobitos"); // Creates the team object in which evrything would be stored
 
     // ! Adding names to the list
+    // * Hi
+    // ? Hello
+    // 
 
     // TODO: Add Manager
     myTeam.add_player(gk);
