@@ -84,4 +84,29 @@ class Team
         }
 
         // TODO: Print the list of players (declare toString and print inside main)
+
+        // Method will add the manager to the team
+        void add_manager(Manager *manager){
+            manager = newManager;
+        }
+
+        // Since the nameOfTeam variable is not initialized or undefined
+        // Getter method will give it a value
+        string getTeamName(){
+            return nameOfTeam;
+        }
+
+        // To String will print out the entire list of the players
+        // iterating through the array
+        string toString(){
+            string roster = "Team: " + getTeamName() + "\n";
+            roster += "Manager: " + Manager.get_last_name() + ", " + Manager.get_current_club() + "\m";
+
+            for(int i = 0;  i < counter; i++){
+                roster += teamList[i].getName() + "\n"; //getName() from Player class
+            }
+
+            return roster;
+        }
+
 };

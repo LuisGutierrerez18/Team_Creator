@@ -31,7 +31,7 @@ int main()
     Player *def = new Defender("Araujo", 83, 1999, 40, 2, 30);
     Player *mid = new Midfielder("de Jong", 87, 1997, 21, 88);
     Player *fwrd = new Attacker("Messi", 94, 1988, 95, 50, 120);
-    // Manager *mngr = new Manager("Manchester City", "Guardiola");
+    Manager *mngr = new Manager("Manchester City", "Guardiola");
 
     // TODO: Change name of team.
     Team myTeam("Lobitos"); // Creates the team object in which evrything would be stored
@@ -41,12 +41,15 @@ int main()
     // ? Hello
     // 
 
-    // TODO: Add Manager
+    // TODO: Add Manager --> Added COMPLETE
+   
+    // ! DONE  
+
     myTeam.add_player(gk);
     myTeam.add_player(def);
     myTeam.add_player(mid);
     myTeam.add_player(fwrd);
-    // myTeam.add_player(mngr);
+    myTeam.add_manager(mngr);
 
     // string input; // Variable for input value
     // cout<< "Enter Player's Name";
@@ -55,5 +58,6 @@ int main()
     // myTeam.search_Player(input);
 
     // myTeam.push_player(input);
-
+    
+    return 0;
 }

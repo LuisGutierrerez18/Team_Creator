@@ -197,7 +197,7 @@ class Player {
         }
 
         // Returns the exact age of the player
-        void get_age(){
+        void calc_age(){
             int year; // Current year
             cout<< "Enter the current year";
             cin >> year;
@@ -220,13 +220,23 @@ class Player {
          * This method would be used as polymorphism
          * Would indicate the action a playing is making
          * Example: If the player is a midfielder polymorphism would change the outcome of the method as: giving assists
+         *
          * Makes the interaction more dynamic
         */
         void playing(){
             cout << "The Player is playing";
         }
 
-        // TODO: Declare a toString method
+        // TODO: Tostring as an abstract method Ex: virtual string_tostring =0
+
+        // To string would print out the information of the player object 
+        string to_string(){
+            // stringstream ss;
+            cout<< "Name: " << get_name()<< endl;
+            cout << "Rating: " << get_rating() << endl;
+            cout << "Country: " << get_country() << endl;
+            cout << "Birthday: " << get_birthday() <<endl;
+        } 
 
 };
 
