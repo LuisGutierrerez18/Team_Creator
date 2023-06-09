@@ -41,7 +41,7 @@ class Team
         /*
          * Will receive the price of each player and subtract it from the club's budget
         */
-        void adjust_budget(double max_price = 10.0) // This max_price is the maximum price of any individual player{
+        void adjust_budget(double max_price = 10.0) { // This max_price is the maximum price of any individual player{
             /* Test */
             cout << "Enter the price of the player: ";
             cin >> price;
