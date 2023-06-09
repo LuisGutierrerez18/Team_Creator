@@ -41,6 +41,12 @@ int main()
     // ? Hello
     // 
 
+    // Using abstract classes method and polymorphism calling the method playing()
+    gk->playing();
+    def->playing();
+    mid->playing();
+    fwrd->playing();
+
     // TODO: Add Manager --> Added COMPLETE
    
     // ! DONE  

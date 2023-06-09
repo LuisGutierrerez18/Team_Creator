@@ -23,13 +23,11 @@ class Team
 
         // Siguiendo ejemplo del profe
         Player *teamList[teamSize]; // Pointers --> array
-    protected:
-        string type; // type of player
 
     public:
         //string team[16]; // list of all the players selected in the team
         double price;
-
+        string type; // type of player
         /* Team Constructor */
         Team(string t){
             counter = 0;
