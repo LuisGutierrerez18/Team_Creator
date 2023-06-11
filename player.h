@@ -223,7 +223,7 @@ class Player {
          *
          * Makes the interaction more dynamic
         */
-        vitual void playing() = 0; // Using Abstract classes
+        vitual void playing() = 0; // Using Abstract classes //
 
         // TODO: Tostring as an abstract method Ex: virtual string_tostring =0
 
