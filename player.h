@@ -197,7 +197,7 @@ class Player {
         }
 
         // Returns the exact age of the player
-        void calc_age(){
+        int calc_age(){
             int year; // Current year
             cout<< "Enter the current year";
             cin >> year;
