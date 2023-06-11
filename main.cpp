@@ -57,6 +57,9 @@ int main()
     myTeam.add_player(fwrd);
     myTeam.add_manager(mngr);
 
+    // Adjusts the budget of the team
+    myTeam.adjust_budget();
+        
     // string input; // Variable for input value
     // cout<< "Enter Player's Name";
     // cin>> input;
