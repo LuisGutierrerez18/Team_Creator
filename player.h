@@ -192,7 +192,7 @@ class Player {
         /*
          * Setter method 'set_position' will update the value of year of birth
         */
-        void set_birthday(int newBirth) {
+        void set_birthday(int newBirth){
             birthday = newBirth;
         }
 
