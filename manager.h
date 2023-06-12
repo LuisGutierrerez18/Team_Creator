@@ -33,6 +33,14 @@ class Manager
         string get_current_club(){
             return current_club;
         }
+        
+        /*
+         * Method: get_last_name returns the last name of the manager
+         * Method return type: String 
+        */
+        string get_last_name(){
+            return last_name;
+        }
 
         /*
          * Method: 'set_current_club will update the value of current_club for the manager

@@ -69,7 +69,7 @@ class Goalkeeper: public Player
         int add_num_saves(){
             return saves++;
         }
-
+//
         // Method overloading of the method 'add_num_saves'
         int add_num_saves(double numSaves){
             saves += static_cast<int>(numSaves); // Cast which changes the value of a double to int

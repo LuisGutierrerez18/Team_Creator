@@ -214,6 +214,7 @@ class Player {
             }
 
             age = year - birthday; // Calculation to determine the age
+            return age;
         }
 
         /*
@@ -230,10 +231,11 @@ class Player {
         // To string would print out the information of the player object 
         string to_string(){
             // stringstream ss;
-            cout<< "Name: " << get_name()<< endl;
-            cout << "Rating: " << get_rating() << endl;
-            cout << "Country: " << get_country() << endl;
-            cout << "Birthday: " << get_birthday() <<endl;
+            string playerInfo = "Name: " + get_name() + "\n";
+            playerInfo += "Rating: " + std::to_string(get_rating()) + "\n";
+            playerInfo += "Country: " + get_country() + "\n";
+            playerInfo += "Birthday: " + std::to_string(get_birthday()) + "\n";
+            return playerInfo;
         } 
 
 };
