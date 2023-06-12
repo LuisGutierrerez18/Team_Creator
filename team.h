@@ -100,10 +100,10 @@ class Team
         // iterating through the array
         string toString(){
             string roster = "Team: " + getTeamName() + "\n";
-            roster += "Manager: " + manager.get_last_name() + ", " + manager.get_current_club() + "\m";
+            roster += "Manager: " + manager->get_last_name() + ", " + manager->get_current_club() + "\n";
 
             for(int i = 0;  i < counter; i++){
-                roster += teamList[i].getName() + "\n"; //getName() from Player class
+                roster += teamList[i]->get_name() + "\n"; //getName() from Player class
             }
 
             return roster;
