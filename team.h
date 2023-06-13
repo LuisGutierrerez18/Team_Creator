@@ -98,12 +98,12 @@ class Team
 
         // To String will print out the entire list of the players
         // iterating through the array
-        string toString(){
+        string to_string(){
             string roster = "Team: " + getTeamName() + "\n";
             roster += "Manager: " + manager->get_last_name() + ", " + manager->get_current_club() + "\n";
 
             for(int i = 0;  i < counter; i++){
-                roster += teamList[i]->get_name() + "\n"; //getName() from Player class
+                roster += teamList[i]->to_string(); //getName() from Player class
             }
 
             return roster;
