@@ -26,9 +26,10 @@ class Attacker: public Player
     public:
 
         /* Constructor */
-        Attacker(string n, int rat, int bir, int vel, int goal, int shot){
+        Attacker(string n, int rat,string origin, int bir, int vel, int goal, int shot){
             name = n;
             rating = rat;
+            country = origin;
             birthday = bir;
             velocity = vel;
             goals = goal;

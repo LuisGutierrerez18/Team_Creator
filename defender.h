@@ -24,9 +24,10 @@ class Defender: public Player
     public:
 
         /* Constructor */
-        Defender(string n, int rat, int bir, int inter, int og, int clean) {
+        Defender(string n, int rat, string from, int bir, int inter, int og, int clean) {
             name = n;
             rating = rat;
+            country = from;
             birthday = bir;
             interceptions = inter;
             own_goals = og;

@@ -24,9 +24,10 @@ class Goalkeeper: public Player
     public:
 
         /* Constructor */
-        Goalkeeper(string n, int rat, int bir, int h, int sa){
+        Goalkeeper(string n, int rat, string cou, int bir, int h, int sa){
             name = n;
             rating = rat;
+            country = cou;
             birthday = bir;
             height = h;
             saves = sa;

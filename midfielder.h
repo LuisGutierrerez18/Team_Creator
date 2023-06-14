@@ -23,9 +23,10 @@ class Midfielder: public Player
     public:
 
         /* Constructor */
-        Midfielder(string n, int rat, int bir, int as, int pas) {
+        Midfielder(string n, int rat, string count, int bir, int as, int pas) {
             name = n;
             rating = rat;
+            country = count;
             birthday = bir;
             assist = as;
             passing_percentage = pas;
