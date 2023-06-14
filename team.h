@@ -49,6 +49,7 @@ class Team
             if(price <= max_price)
             {
                 budget = budget - price;
+                
                 cout<< "Budget Left:" << budget << "\n";
             }
 
