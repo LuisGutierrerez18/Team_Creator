@@ -61,8 +61,11 @@ int main()
 
     // Adjusts the budget of the team
     myTeam.adjust_budget();
+    cout<<"|============|===============| \n";
+    cout<<"| Name | Rating | Year of Birth | Stat/Hegight | Cleansheet/shot |";
     cout<<myTeam.to_string();
-;    
+      
+
     // string input; // Variable for input value
     // cout<< "Enter Player's Name";
     // cin>> input;
