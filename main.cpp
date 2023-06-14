@@ -51,8 +51,9 @@ int main()
 
     // TODO: Add Manager --> Added COMPLETE
    
-    // ! DONE  
-    //search_player();
+    // ! DONE 
+    
+    cout<< "This is the base team\n";
     myTeam.add_player(gk);
     myTeam.add_player(def);
     myTeam.add_player(mid);
@@ -63,8 +64,10 @@ int main()
     myTeam.adjust_budget();
     cout<<"|===============|===============|==============|=================| \n";
     cout<<"| Name | Rating | Year of Birth | Stat/Hegight | Cleansheet/shot | \n";
-    cout<<myTeam.to_string();
-      
+    cout<<myTeam.to_string()<<"\n";
+    cout<<"Choose More /n";
+    //Player player; 
+    //player.search_player();  
 
     // string input; // Variable for input value
     // cout<< "Enter Player's Name";
