@@ -90,6 +90,6 @@ class Defender: public Player
          * Since is Defender player is keeping cleansheets
         */
         void playing(){
-            cout << "Defender is keeping many cleansheets for his team";
+            cout << "Defender is keeping many cleansheets for his team \n";
         }
 };

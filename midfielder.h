@@ -74,6 +74,6 @@ class Midfielder: public Player
          * Since is midfielder player is giving assists
         */
         void playing(){
-            cout << "Midfielder is giving assist to the forwards";
+            cout << "Midfielder is giving assist to the forwards \n";
         }
 };

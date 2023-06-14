@@ -82,7 +82,7 @@ class Goalkeeper: public Player
          * Since is goalkeeper player is preventing goals
         */
         void playing(){
-            cout << "Goalkeeper is preventing goals for his team";
+            cout << "Goalkeeper is preventing goals for his team \n";
         }
 
 };
