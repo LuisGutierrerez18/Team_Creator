@@ -38,7 +38,7 @@ int main()
     // TODO: Change name of team.
     Team myTeam("Lobitos"); // Creates the team object in which evrything would be stored
 
-    // ! Adding names to the list
+    // ! Adding names to the list 
     // * Hi
     // ? Hello
     // 
