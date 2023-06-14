@@ -14,3 +14,4 @@ If the user enters a wrong entry data type as an nonexistent player or manager t
 # Run in Terminal
 Use this: 
 g++ main.cpp
+Enter: ./a.out
