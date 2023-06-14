@@ -121,7 +121,7 @@ class Player {
             }
         }
 
-        /* Getter and Setter Methods */
+        // *! Getter and Setter Methods */
 
         /*
          * Getter method: 'get_name' designed to get the name of the player

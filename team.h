@@ -50,7 +50,7 @@ class Team
             {
                 budget = budget - price;
                 
-                cout<< "Budget Left:" << budget << "\n";
+                cout<< "Budget Left: " << budget << "\n";
             }
 
         }
