@@ -62,7 +62,7 @@ int main()
     // Adjusts the budget of the team
     myTeam.adjust_budget();
     cout<<"|============|===============| \n";
-    cout<<"| Name | Rating | Year of Birth | Stat/Hegight | Cleansheet/shot |";
+    cout<<"| Name | Rating | Year of Birth | Stat/Hegight | Cleansheet/shot | \n";
     cout<<myTeam.to_string();
       
 
