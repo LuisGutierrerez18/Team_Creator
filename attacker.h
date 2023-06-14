@@ -91,6 +91,6 @@ class Attacker: public Player
          * Since is forward player is scoring goals
         */
         void playing(){
-            cout << "Forward is scoring many goals for his team";
+            cout << "Forward is scoring many goals for his team \n";
         }
 };
