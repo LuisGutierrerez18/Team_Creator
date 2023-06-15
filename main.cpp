@@ -59,12 +59,12 @@ int main()
     Player *def = new Defender("| Araujo    ", 83, "Uruguay    ", 1999, 40, 2, 30);
     Player *mid = new Midfielder("| deJong    ", 87, "Netherlands", 1997, 21, 88);
     Player *fwrd = new Attacker("| L Messi   ", 94,"Argentina  " , 1988, 95, 50, 120);
-    Manager *mngr = new Manager("Manchester City", "Guardiola");
+    Manager *mngr = new Manager("Manchester City\t\t      |", "Guardiola");
 
     
 
     // TODO: Change name of team.
-    Team myTeam("Lobitos"); // Creates the team object in which evrything would be stored
+    Team myTeam("Lobitos\t\t\t\t\t      |"); // Creates the team object in which evrything would be stored
 
     // ! Adding names to the list 
     // * Hi
