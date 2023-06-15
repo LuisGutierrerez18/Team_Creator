@@ -87,15 +87,13 @@ int main()
     
 
     // Adjusts the budget of the team
-    myTeam.adjust_budget();
-    cout<<BOLDBLUE<< " ________________________________________________________________________"<<RESET<<endl;
-    cout<< BOLDBLUE<<"|============|==========|=============|================================|"<<RESET<<endl;
-    cout<< BOLDBLUE<<"| Name\t     |  Rating  |   Country   | Year of Birth | Stat/Height | Cleansheet/shot |"<<RESET<<endl;
-    cout<<myTeam.to_string();
-    cout<< BOLDBLUE<<"|============|==========|=============|================================|"<<RESET<<endl;
-    cout<<BOLDBLUE<< " ------------------------------------------------------------------------"<<RESET<<endl;
     
-    cout<<BOLDWHITE<<"Choose More"<<RESET<<endl;
+    cout<<BOLDBLUE<< " _____________________________________________________"<<RESET<<endl;
+    cout<< BOLDBLUE<<"|============|==========|=============|===============|"<<RESET<<endl;
+    cout<< BOLDBLUE<<"| Name\t     |  Rating  |   Country   | Year of Birth | "<<RESET<<endl;
+    cout<<myTeam.to_string();
+    cout<< BOLDBLUE<<"|============|==========|=============|===============|"<<RESET<<endl;
+    cout<<BOLDBLUE<< " -----------------------------------------------------"<<RESET<<endl;
     
     // Using abstract classes method and polymorphism calling the method playing()
     cout << "\n";
@@ -105,16 +103,25 @@ int main()
     def->playing();
     mid->playing();
     fwrd->playing();
+    cout<<"\n";
+    
+    cout<<BOLDWHITE<<"Choose More"<<RESET<<endl;
     // Player player; 
     // player.search_player();  
 
-    // string input; // Variable for input value
-    // cout<< "Enter Player's Name";
+    string input; // Variable for input value
+   // cout<< "Enter Player's Name";
     // cin>> input;
 
-    //  myTeam.search_Player(input);
+    myTeam.search_player();
+    cout<<"\n";
+    cout<<BOLDWHITE<<"\nAlmost Done... Only Five More\n"<<RESET<<endl;
+    myTeam.push_player();
+    myTeam.adjust_budget();
+    cout<<BOLDGREEN"\nYour Players have been stored\n"<<RESET<<endl;
+    myTeam.to_string();
+    cout<<BOLDGREEN"\nCONGRATULATIONS\nYou Are Set!\n"<<RESET<<endl;
 
-    // myTeam.push_player(input);
-    
+
     return 0;
 }
