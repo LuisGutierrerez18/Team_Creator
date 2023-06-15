@@ -44,7 +44,7 @@ class Team
         void search_player(string *playerList, int &index){
             /* List of available goalkeepers */
             string name;
-            string goalKeeperList[] = {"Ter Stegen", "Courtois", "Donnaruma", "Ederson", "Pope"}; // Array with the names of goalkeepers
+            string goalKeeperList[] = {"Ter Stegen", "Courtois", "Donnaruma", "Ederson", "Pope", "Beker"}; // Array with the names of goalkeepers
             int length_GK_List = sizeof(goalKeeperList)/sizeof(goalKeeperList[0]); //Will return the length of goalkeer Array
             // And will be used for the for loop transversing
 
@@ -159,7 +159,7 @@ class Team
             int index = 0;
 
             /* Test */
-            while (i <= 4)
+            while (i <= 5)
             {
                 cout<<"\n";
                 search_player(playerList,index);
