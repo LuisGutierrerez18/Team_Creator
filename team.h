@@ -41,7 +41,7 @@ class Team
          * Public search_player method will search for a desired player
          * Generate a response if the player was found
         */
-        void search_player(){
+        void search_player(string *playerList, int &index){
             /* List of available goalkeepers */
             string name;
             string goalKeeperList[] = {"Ter Stegen", "Courtois", "Donnaruma", "Ederson", "Pope"}; // Array with the names of goalkeepers
@@ -121,11 +121,15 @@ class Team
                     }
                 }
             }
-
+            
             // Finally
             // if the player is not found on any of the arrays then it will display a message saying the player was not found
             if(!playerFound){
                 cout<< "Player Was NOT Found \n";
+            }
+            if (playerFound) {
+                playerList[index] = name;
+                index++;
             }
         }
         /*
@@ -151,18 +155,22 @@ class Team
         */
         void push_player(){
             int i = 0;
-            //string name;
+            string playerList[5];
+            int index = 0;
 
             /* Test */
             while (i <= 4)
             {
                 cout<<"\n";
-                search_player();
+                search_player(playerList,index);
 
                 i++;
             }
 
-            //cout<<name;
+            cout<<"\nList of names Added: \n";
+            for (int i = 0; i < index; i++) {
+                cout << playerList[i] << endl;
+            }
         }
 
         /*
