@@ -105,22 +105,17 @@ int main()
     fwrd->playing();
     cout<<"\n";
     
-    cout<<BOLDWHITE<<"Choose More"<<RESET<<endl;
-    // Player player; 
-    // player.search_player();  
+    //cout<<BOLDWHITE<<"Choose More"<<RESET<<endl;
 
-    string input; // Variable for input value
-   // cout<< "Enter Player's Name";
-    // cin>> input;
-
-    myTeam.search_player();
+    //myTeam.push_player();
     cout<<"\n";
-    cout<<BOLDWHITE<<"\nAlmost Done... Only Five More\n"<<RESET<<endl;
+    cout<<BOLDWHITE<<"Almost Done... Only Five More\n"<<RESET<<endl;
     myTeam.push_player();
+    
     myTeam.adjust_budget();
     cout<<BOLDGREEN"\nYour Players have been stored\n"<<RESET<<endl;
     myTeam.to_string();
-    cout<<BOLDGREEN"\nCONGRATULATIONS\nYou Are Set!\n"<<RESET<<endl;
+    cout<<BOLDGREEN"\nCONGRATULATIONS\nYou Are All Set!\n"<<RESET<<endl;
 
 
     return 0;
