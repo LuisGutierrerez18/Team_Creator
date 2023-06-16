@@ -36,36 +36,56 @@ class Defender: public Player
 
         /* Getter and Setter Methods for the defender class */
 
-        /*
-         * Getter Method: 'get_interceptions' will return the numnber of interceptions of the defender
+        /**
+         * 'get_interceptions' designed to get the interceptions from the defender player object
+         * Receives the interceptions as an attribute of the object
+         * 
+         * @param
+         * returns the interceptions of the player Object as an int data type
         */
         int get_interceptions(){
             return interceptions;
         }
 
-        /*
-         * Setter Method: 'set_interceptions' will update the value of interceptions
+         /**
+         * 'set_interceptions' designed to update the value interceptions of the player object
+         * Receives newInter as an int method parameter 
+         * 
+         * @param
+         * returns newInter (Data type:int) as the interceptions of the player object 
         */
         void set_interceptions(int newInter){
             interceptions = newInter;
         }
 
-        /*
-         * Getter Method: 'get_own_goals' will return the the number of own goals conceded
+        /**
+         * 'get_interceptions' designed to get the number of ow_goals from the defender player object
+         * Receives the ow_goals as an attribute of the object
+         * 
+         * @param
+         * returns the ow_goals of the player Object as an int data type
         */
         int get_own_goals(){
             return own_goals;
         }
 
-        /*
-         * Setter Method: 'set_own_goal' will update the value of own goals
+         /**
+         * 'set_own_goal' designed to update the value own_goals of the player object
+         * Receives newOwnGoals as an int method parameter 
+         * 
+         * @param
+         * returns newOwnGoals (Data type:int) as the own_goals of the player object 
         */
         void set_own_goal(int newOwnGoals){
             own_goals = newOwnGoals;
         }
 
-        /*
-         * Getter Method: 'get_cleansheet' will return the the number of cleansheets reached
+       /**
+         * 'get_interceptions' designed to get the number of cleansheet from the defender player object
+         * Receives the cleansheet as an attribute of the object
+         * 
+         * @param
+         * returns the cleansheet of the player Object as an int data type
         */
         int get_cleansheet(){
             return cleansheet;
@@ -78,17 +98,24 @@ class Defender: public Player
             cleansheet = newCleansheet;
         }
 
-        /*
-         * Method will serve as a counter to continously updating the number of cleansheet games reached by the defender
+         /**
+         * Method will serve as a counter to continously updating the number of cleansheets reached by the player
+         * cleansheet is member and paramter of the defender class 
+         * 
+         * @param
+         * returns the updated value of cleansheet as an int 
         */
         int add_num_cleansheet(){
             return cleansheet++;
         }
 
-        /*
+        /**
          * Class being used by the polymorphism concept. Making the program more interactive
          * Tell the user the action the player is doing
          * Since is Defender player is keeping cleansheets
+         * 
+         * @param
+         * returns or prints out a representation of an action being made by the defender object
         */
         void playing(){
             cout << "Defender is keeping many cleansheets for his team \n";

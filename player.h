@@ -34,80 +34,128 @@ class Player {
         }*/
         // *! Getter and Setter Methods */
 
-        /*
-         * Getter method: 'get_name' designed to get the name of the player
+        /**
+         * 'get_name' designed to get the name of the player object
+         * Gives the name as an attribute of the object
+         * 
+         * @param
+         * returns the name of the player Object as a string
         */
         string get_name(){
             return name;
         }
 
-        /*
+        /**
          * Setter method: 'set_name' designed to update the name of the player
+         * Receives newName string parameter 
+         * 
+         * @param
+         * returns newName as the name of the player object 
         */
         void set_name(string newName){
             // Data type: string
             name = newName;
         }
 
-        /*
-         * Getter method: 'get_rating' which will return the rating of the player
+        /**
+         * 'get_rating' designed to get the rating of the player object
+         * Gives the rating as an attribute of the object
+         * 
+         * @param
+         * returns the rating of the player Object as an int
         */
         int get_rating(){
             return rating;
         }
 
-        /*
-         * Setter method 'set_rating' will update the rating value
+         /**
+         * 'set_rating' designed to update the rating of the player
+         * Receives newRating int as parameter 
+         * 
+         * @param
+         * returns newRating (Data type:int) as the rating of the player object 
         */
         void set_rating(int newRating){
             // Data type: int
             rating = newRating;
         }
 
-        /*
-         * Getter Method: 'get_country' will return the country of origign of the player
+       /**
+         * 'get_country' designed to get the country of origin of the player object
+         * Gives the country as an attribute of the object
+         * 
+         * @param
+         * returns the country of the player Object as an string
         */
         string get_country(){
             return country;
         }
 
-        /*
-         * Setter method 'set_country' will update the value of country
+         /**
+         * 'set_country' designed to update the country of the player
+         * Receives newCountry as string method parameter 
+         * 
+         * @param
+         * returns newCountry (Data type:string) as the country of the player object 
         */
         void set_country(string newCountry){
             // Data type: string
             country = newCountry;
         }
 
-        /*
-         * Getter method 'get_position' will return the position of the player
+      /**
+         * 'get_position' designed to get the position of the player object
+         * Gives the position as an attribute of the object
+         * 
+         * @param
+         * returns the position of the player Object as an string
         */
         string get_position(){
             return position;
         }
 
-        /*
-         * Setter method 'set_position' will update the value of position
+        /**
+         * 'set_country' designed to update the position of the player
+         * Receives position as string method parameter 
+         * 
+         * @param
+         * returns newPos (Data type:string) as the position of the player object 
         */
         void set_position(string newPos){
             position = newPos;
         }
 
-        /*
-         * Getter method 'get_birthday' will return the player's year of birth
+        /**
+         * 'get_position' designed to get the year of birth from the player object
+         * Gives the birthday as an attribute of the object
+         * 
+         * @param
+         * returns the birthday of the player Object as an int
         */
         int get_birthday(){
             return birthday;
         }
 
-        /*
-         * Setter method 'set_position' will update the value of year of birth
+        /**
+         * 'set_country' designed to update the year of birth of the player
+         * Receives newBirth as int method parameter 
+         * 
+         * @param
+         * returns newPos (Data type:int) as the birthday of the player object 
         */
         void set_birthday(int newBirth){
             birthday = newBirth;
         }
 
-        // Returns the exact age of the player
+        /**
+         * calc_age() will calculate the exact age of the player
+         * Inputs the current year from the user, 
+         * takes the year of birth from player and subtracts the information
+         * Checks if the year of birth is valid or not
+         * 
+         * @param
+         * returns the calculated age as an int 
+        */ 
         int calc_age(){
             int year; // Current year
             cout<< "Enter the current year";
@@ -128,18 +176,27 @@ class Player {
             return age;
         }
 
-        /*
+        /**
          * This method would be used as polymorphism
          * Would indicate the action a playing is making
          * Example: If the player is a midfielder polymorphism would change the outcome of the method as: giving assists
          *
          * Makes the interaction more dynamic
+         * 
+         * @param
+         * 
         */
         virtual void playing() = 0; // Using Abstract classes //
 
-        // TODO: Tostring as an abstract method Ex: virtual string_tostring =0
 
-        // To string would print out the information of the player object 
+        /**
+         * To_string converts (concatenates) information as string 
+         * print out the information of the player object as a string
+         * Includes the following player's name, rating, country and birthday
+         * 
+         * @param
+         * returns a string representatation of the object's information
+        */ 
         string to_string(){
             // stringstream ss;
             string playerInfo = get_name() + " |    ";

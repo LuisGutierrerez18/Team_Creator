@@ -27,31 +27,45 @@ class Manager
         }
         /* Getter and Setter Methods for the manager object */
 
-       /*
-        * Method: 'get_current_club' will get and return the current club the manager is coaching
-       */
+        /**
+         * 'get_shots_on_target' designed to get the current_club from the manager object
+         * Receives the current_club as an attribute of the object
+         * 
+         * @param
+         * returns the current_club of the player Object as an string data type
+        */
         string get_current_club(){
             return current_club;
         }
         
-        /*
+        /**
          * Method: get_last_name returns the last name of the manager
-         * Method return type: String 
+         * 
+         * @param
+         * return last_name, data type: String 
         */
         string get_last_name(){
             return last_name;
         }
 
-        /*
-         * Method: 'set_current_club will update the value of current_club for the manager
+        /**
+         * 'set_current_club' designed to update the value current_club of the manager object
+         * Receives newClub as an string method parameter 
+         * 
+         * @param
+         * returns newClub (Data type:int) as the current_club of the player object 
         */
         void set_current_club(string newClub){
             current_club = newClub;
         }
 
-        /*
-         * public 'search_manager' method will require an input from the user looking for a manager.
+        /**
+         * public 'search_manager' searchs for manager 
+         * method will require an input from the user looking for a manager.
          * method will traverse through an array wilth coaches last names looking for
+         * 
+         * @param
+         * return a string for manager 
         */
         void search_manager(){
             string manager_list[] = {"Guardiola", "Xavi", "Klopp", "Ancelloti", "Zidane", "Inzaghi", "Arteta"}; // Manager's list

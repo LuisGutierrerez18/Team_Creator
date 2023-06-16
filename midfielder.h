@@ -34,45 +34,68 @@ class Midfielder: public Player
 
         /* Getter and Setter Methods for the midfielder class */
 
-        /*
-         * Getter Method: 'get_assist' will return the assists made by the midfielder
+        /**
+         * 'get_assist' designed to get the number of assists from the midfielder player object
+         * Gives the assist as an attribute of the object
+         * 
+         * @param
+         * returns the assist of the player Object as an int data type
         */
         int get_assist(){
             return assist;
         }
 
-        /*
-         * Setter Method: 'set_assist' will update the value of assists
+        /**
+         * 'set_country' designed to update the value assist of the player object
+         * Receives assist as an int method parameter 
+         * 
+         * @param
+         * returns newAssist (Data type:int) as the assist of the player object 
         */
         void set_assist(int newAssist){
             assist = newAssist;
         }
 
-        /*
-         * Getter Method: 'get_passing_percentages' will return the passing percentage of the midfielder
+        /**
+         * 'get_passing_percentages' designed to get the passing_percentage from the midfielder player object
+         * Gives the passing_percentage as an attribute of the object
+         * 
+         * @param
+         * returns the passing_percentage of the player Object as an int data type
         */
         int get_passing_percentages(){
             return passing_percentage;
         }
 
-        /*
-         * Setter Method: 'set_passing_percentage' will update the value of passing percentage
+        /**
+         * 'set_country' designed to update the value assist of the player object
+         * Receives assist as an int method parameter 
+         * 
+         * @param
+         * returns newPass (Data type:int) as the passing_percentage of the player object 
         */
         void set_passing_percentage(int newPass){
             passing_percentage = newPass;
         }
 
-        /*
+        /**
          * Method will serve as a counter to continously updating the number of assists given by the player
+         * assist is member and paramter of the midfielder class 
+         * 
+         * @param
+         * returns the updated value of assist as an int 
         */
         int add_num_assists(){
             return assist++;
         }
 
-        /*
+        /**
          * Class being used using the polymorphism concept. Making the program more interactive
          * Tell the user the action the player is doing
          * Since is midfielder player is giving assists
+         * 
+         * @param
+         * returns or prints out a representation of an action being made by the midfielder object
         */
         void playing(){
             cout << "Midfielder is giving assist to the forwards \n";

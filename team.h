@@ -37,9 +37,13 @@ class Team
 
         /* Methods */
 
-        /*
+        /**
          * Public search_player method will search for a desired player
-         * Generate a response if the player was found
+         * Receives two variables a pointer string playerList and an index which updates its values
+         * User input: user is asked to enter a name of a player
+         * 
+         * @param
+         * Generate and returns a string response if the player was found or not
         */
         void search_player(string *playerList, int &index){
             /* List of available goalkeepers */
@@ -122,18 +126,26 @@ class Team
                 }
             }
             
-            // Finally
             // if the player is not found on any of the arrays then it will display a message saying the player was not found
             if(!playerFound){
                 cout<< "Player Was NOT Found \n";
             }
+
+            // Finally 
+            // If the boolean expression is changed to true therefore the player is found
+            // The player would be added to the list declared at the beggining of the method
+            // The index is updated
             if (playerFound) {
                 playerList[index] = name;
                 index++;
             }
         }
-        /*
-         * Will receive the price of each player and subtract it from the club's budget
+        /**
+         * adjust_budget receives a double variable 
+         * Will receive the price of player and subtract it from the club's budget
+         * 
+         * @param
+         * Returns a double variable price 
         */
         void adjust_budget(double max_price = 10.0) { // This max_price is the maximum price of any individual player{
             /* Test */
@@ -150,8 +162,13 @@ class Team
 
         }
 
-        /*
-         * Method will add all the players to the principal team list
+        /**
+         * Method will be working hand by hand with the method search_player
+         * It will add all the players to the principal team list
+         * push_player receives a playerList[5] and two index variables 
+         * 
+         * @param
+         * Returns string list of players entered by the user
         */
         void push_player(){
             int i = 0;
@@ -173,8 +190,13 @@ class Team
             }
         }
 
-        /*
-         * Method will add all the players to the principal team list
+        /**
+         * add_player method add new players to the team list
+         * Takes a pointer to a player object and adds it to the teamList array
+         * 
+         * @param
+         * player is a pinter to a Player object
+         * returns a pointer list of the players
         */
         void add_player(Player *player){
             teamList[counter] = player;
@@ -183,25 +205,48 @@ class Team
 
         // TODO: Print the list of players (declare toString and print inside main)
 
-        // Method will add the manager to the team
+        /**
+         * add_manager adds a new manager to the class
+         * Method takes a pointer to a Manager object  
+         * Assigns it to the 'manager' attribute of the class
+         * 
+         * @param
+         * returns newManager -> pointer of a Manager object is added
+         */ 
         void add_manager(Manager *newManager){
             manager = newManager;
         }
 
-        // Since the nameOfTeam variable is not initialized or undefined
-        // Getter method will give it a value
+        /**
+         * Since the nameOfTeam variable is not initialized or undefined
+         * Getter method will give it a value
+         * 
+         * @param
+         * Returns the nameOfTeam
+        */ 
+        
         string getTeamName(){
             return nameOfTeam;
         }
 
-        // To String will print out the entire list of the players
-        // iterating through the array
+        /**
+         * To_string converts (concatenates) information as string 
+         * print out the entire list of the players iterating through the array 
+         * Include this elemenets as the team's roster: team name, manager's last name,
+         * current club, and a list of players 
+         * List of players details obtained from the Player class's to_string method.
+         * 
+         * '|' character used to organize information in a table
+         * 
+         * @param
+         * returns information of roster as a string 
+         */  
         string to_string(){
             string roster = "|Team: " + getTeamName() + "\n";
             roster += "|Manager: " + manager->get_last_name() + ", " + manager->get_current_club() + "\n";
 
             for(int i = 0;  i < counter; i++){
-                roster += teamList[i]->to_string(); //getName() from Player class
+                roster += teamList[i]->to_string(); // from Player class
             }
 
             return roster;
