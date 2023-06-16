@@ -19,7 +19,7 @@ class Team
     private:
         double budget; // Team Budget assigned to 100 by default
         int counter;
-        static const int teamSize = 5;
+        static const int teamSize = 7;
         string nameOfTeam;
 
         // Siguiendo ejemplo del profe
@@ -141,6 +141,14 @@ class Team
             }
         }
 
+        /**
+         * Using method overload, search fot a player
+         * Receives a player object as data type, and string name as param 
+         * 
+         * @param
+         * return player added to list if foud
+         * Null if player not found
+        */
         Player* search_player(string name) {
             for (int i = 0; i < teamSize; i++) {
                 if (teamList[i]->get_name() == name) {

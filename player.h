@@ -12,6 +12,8 @@
 #include<iostream> // prints
 #include <string>
 using namespace std;
+#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
+#include <stdlib.h>
 
 
 class Player {
@@ -205,7 +207,16 @@ class Player {
             playerInfo += std::to_string(get_birthday()) + "      | \n";
             return playerInfo;
         }
-
+        
+        /**
+         * To_string converts (concatenates) information as string using method overload
+         * print out the information of the player object as a string
+         * Includes a table that is filled with player information
+         * Includes the following player's name, rating, country and birthday
+         * 
+         * @param
+         * returns a string representatation of the object's player information
+        */ 
         string to_string(bool printTable) {
             string playerInfo = "";
             if (printTable) {
