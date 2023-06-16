@@ -94,7 +94,12 @@ int main()
     myTeam.add_player(def);
     myTeam.add_player(mid);
     myTeam.add_player(fwrd);
-    myTeam.add_player(new Attacker("De Santos", 94,"Mexico" , 1988, 95, 50, 120));
+    myTeam.add_player(new Attacker("Do Santos", 94,"Mexico" , 1988, 95, 50, 120));
+    myTeam.add_player(new Attacker("Lukaku", 84,"Belgium" , 1992, 80, 50, 120));
+    myTeam.add_player(new Goalkeeper("Pope", 85,"England" , 1988, 95, 50));
+    myTeam.add_player(new Midfielder("Pedri", 88, "Spain", 2002, 21, 80));
+    myTeam.add_player(new Midfielder("Gavi", 86, "Spain", 2003, 20, 75));
+
     
 
     // Adjusts the budget of the team
@@ -117,19 +122,40 @@ int main()
     cout<<"\n";
     cout<<BOLDWHITE<<"Almost Done... Only Five More\n"<<RESET<<endl;
     // myTeam.push_player();
+    int option = -1;
+    while(option != 4){
+        cout<<"\n\n";
+        cout<< "1. Search another player \n";
+        cout<< "2. Under Construction \n";
+        cout<< "3. Print Your List \n";
+        cout<< "4. Exit \n";
+        cin>>option;
+
+        switch(option) {
+            case 1:
+                search_option_funtion(&myTeam);
+                break;
+            case 2:
+                //add_player(new Goalkeeper());
+                cout<<"Under Construction";
+                break;
+            case 3:
+                cout<<myTeam.to_string();
+                break;
+            case 4:
+            default:
+                cout << "Thanks for playing";
+                return 0;
+
+        }
+    }
     
-    // do {
-    // search_option_funtion(&myTeam);
-    // add_player(new Goalkeeper());
-    // } while ()
-    
-    search_option_funtion(&myTeam);
     // cout<<"Has been succesfully added to your team";
 
-    myTeam.adjust_budget();
-    cout<<BOLDGREEN"\nYour Players have been stored\n"<<RESET<<endl;
-    myTeam.to_string();
-    cout<<BOLDGREEN"\nCONGRATULATIONS\nYou Are All Set!\n"<<RESET<<endl;
+    // myTeam.adjust_budget();
+    // cout<<BOLDGREEN"\nYour Players have been stored\n"<<RESET<<endl;
+    // myTeam.to_string();
+    // cout<<BOLDGREEN"\nCONGRATULATIONS\nYou Are All Set!\n"<<RESET<<endl;
 
 
     return 0;
