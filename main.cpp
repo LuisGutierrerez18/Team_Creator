@@ -39,6 +39,21 @@ using namespace std;
 #define BOLDWHITE   "\033[1m\033[37m"      /* Bold White */  
 #include <stdlib.h>
 
+void search_option_funtion(Team* team) {
+    string name;
+    cout<<"Be advised to use player's last name \n"; // Use only last name of the player
+    cout<<"\nEnter the player's name: ";
+    cin >> name;
+    Player* foundPlayer = team->search_player(name);
+
+    if (foundPlayer) {
+        cout << name << " Was Found and Available \n";
+        cout << foundPlayer->to_string(true) << "\n";
+    } else {
+        cout << name << " Doesn't exist \n";
+    }
+}
+
 int main()
 {
     string start;
@@ -51,17 +66,7 @@ int main()
     cout << BOLDYELLOW"Rules are Simple: " << RESET << endl;
     cout<<"Enter a Player's Name We Add it to the Team List\n";
     cout<< "Enter ok to continue: ";
-    cin>>rules;
-   
-    // ! Creating our player objects
-
-    Player *gk = new Goalkeeper("| ter Stegen", 88, "Germany    ", 1992, 182, 100);
-    Player *def = new Defender("| Araujo    ", 83, "Uruguay    ", 1999, 40, 2, 30);
-    Player *mid = new Midfielder("| deJong    ", 87, "Netherlands", 1997, 21, 88);
-    Player *fwrd = new Attacker("| L Messi   ", 94,"Argentina  " , 1988, 95, 50, 120);
-    Manager *mngr = new Manager("Manchester City\t\t      |", "Guardiola");
-
-    
+    cin>>rules; 
 
     // TODO: Change name of team.
     Team myTeam("Lobitos\t\t\t\t\t      |"); // Creates the team object in which evrything would be stored
@@ -78,22 +83,23 @@ int main()
     // ! DONE 
     cout << "\n";
     cout<< GREEN << "This is the Base Team" << RESET << endl;
-    myTeam.add_manager(mngr);
    
+    Player *gk = new Goalkeeper("ter Stegen", 88, "Germany", 1992, 182, 100);
+    Player *def = new Defender("Araujo", 83, "Uruguay", 1999, 40, 2, 30);
+    Player *mid = new Midfielder("deJong", 87, "Netherlands", 1997, 21, 88);
+    Player *fwrd = new Attacker("L Messi", 94,"Argentina" , 1988, 95, 50, 120);
+    Manager *mngr = new Manager("Manchester City", "Guardiola");
+    myTeam.add_manager(mngr);
     myTeam.add_player(gk);
     myTeam.add_player(def);
     myTeam.add_player(mid);
     myTeam.add_player(fwrd);
+    myTeam.add_player(new Attacker("De Santos", 94,"Mexico" , 1988, 95, 50, 120));
     
 
     // Adjusts the budget of the team
     
-    cout<<BOLDBLUE<< " _____________________________________________________"<<RESET<<endl;
-    cout<< BOLDBLUE<<"|============|==========|=============|===============|"<<RESET<<endl;
-    cout<< BOLDBLUE<<"| Name\t     |  Rating  |   Country   | Year of Birth | "<<RESET<<endl;
     cout<<myTeam.to_string();
-    cout<< BOLDBLUE<<"|============|==========|=============|===============|"<<RESET<<endl;
-    cout<<BOLDBLUE<< " -----------------------------------------------------"<<RESET<<endl;
     
     // Using abstract classes method and polymorphism calling the method playing()
     cout << "\n";
@@ -110,8 +116,16 @@ int main()
     //myTeam.push_player();
     cout<<"\n";
     cout<<BOLDWHITE<<"Almost Done... Only Five More\n"<<RESET<<endl;
-    myTeam.push_player();
+    // myTeam.push_player();
     
+    // do {
+    // search_option_funtion(&myTeam);
+    // add_player(new Goalkeeper());
+    // } while ()
+    
+    search_option_funtion(&myTeam);
+    // cout<<"Has been succesfully added to your team";
+
     myTeam.adjust_budget();
     cout<<BOLDGREEN"\nYour Players have been stored\n"<<RESET<<endl;
     myTeam.to_string();
