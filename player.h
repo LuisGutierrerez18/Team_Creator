@@ -199,12 +199,26 @@ class Player {
         */ 
         string to_string(){
             // stringstream ss;
-            string playerInfo = get_name() + " |    ";
+            string playerInfo =  + "|  " + get_name() + " |    ";
             playerInfo += std::to_string(get_rating()) + " \t| ";
             playerInfo += get_country() + " |\t    ";
             playerInfo += std::to_string(get_birthday()) + "      | \n";
             return playerInfo;
-        } 
+        }
+
+        string to_string(bool printTable) {
+            string playerInfo = "";
+            if (printTable) {
+                playerInfo += " _____________________________________________________\n";
+                playerInfo += "| Name\t     |  Rating  |   Country   | Year of Birth | \n";
+                playerInfo += "|------------|----------|-------------|---------------| \n";
+            }
+            playerInfo += to_string();
+            if (printTable) {
+                playerInfo += " ----------------------------------------------------- \n\n";
+            }
+            return playerInfo;
+        }
 
 };
 

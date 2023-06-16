@@ -19,7 +19,7 @@ class Team
     private:
         double budget; // Team Budget assigned to 100 by default
         int counter;
-        static const int teamSize = 16;
+        static const int teamSize = 5;
         string nameOfTeam;
 
         // Siguiendo ejemplo del profe
@@ -140,6 +140,16 @@ class Team
                 index++;
             }
         }
+
+        Player* search_player(string name) {
+            for (int i = 0; i < teamSize; i++) {
+                if (teamList[i]->get_name() == name) {
+                    return teamList[i];
+                }
+            }
+            return NULL;
+        }
+
         /**
          * adjust_budget receives a double variable 
          * Will receive the price of player and subtract it from the club's budget
@@ -149,7 +159,8 @@ class Team
         */
         void adjust_budget(double max_price = 10.0) { // This max_price is the maximum price of any individual player{
             /* Test */
-            budget = 100.0;
+            cout<<"============= BUDGET VISITED"<<endl;
+            int budget = 100.0;
             cout << "\nEnter the price of the player: ";
             cin >> price;
 
@@ -170,25 +181,23 @@ class Team
          * @param
          * Returns string list of players entered by the user
         */
-        void push_player(){
-            int i = 0;
-            string playerList[5];
-            int index = 0;
-
-            /* Test */
-            while (i <= 5)
-            {
-                cout<<"\n";
-                search_player(playerList,index);
-
-                i++;
-            }
-
-            cout<<"\nList of names Added: \n";
-            for (int i = 0; i < index; i++) {
-                cout << playerList[i] << endl;
-            }
-        }
+        // void push_player(){
+        //     int i = 0;
+        //     string playerList[5];
+        //     int index = 0;
+        //     /* Test */
+        //     while (i <= 4)
+        //     {
+        //         cout<<"\n";
+        //         search_player(playerList,index);
+        //         i++;
+        //     }
+        //     cout<<"\nList of names Added: \n";
+        //     for (int j = 0; j < index; j++) {
+        //         cout << playerList[j] << endl;
+        //     }
+        //     cout<<"============= PUSH PLAYER EXIT"<<endl;
+        // }
 
         /**
          * add_player method add new players to the team list
@@ -242,13 +251,17 @@ class Team
          * returns information of roster as a string 
          */  
         string to_string(){
-            string roster = "|Team: " + getTeamName() + "\n";
-            roster += "|Manager: " + manager->get_last_name() + ", " + manager->get_current_club() + "\n";
+            string roster = "";
+            roster += "Team: " + getTeamName() + "\n";
+            roster += "Manager: " + manager->get_last_name() + ", " + manager->get_current_club() + "\n";
+            roster += " _____________________________________________________\n";
+            roster += "| Name\t     |  Rating  |   Country   | Year of Birth | \n";
+            roster += "|------------|----------|-------------|---------------| \n";
 
             for(int i = 0;  i < counter; i++){
                 roster += teamList[i]->to_string(); // from Player class
             }
-
+            roster += " ----------------------------------------------------- \n\n";
             return roster;
         }
 
